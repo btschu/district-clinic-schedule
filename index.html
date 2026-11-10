@@ -130,26 +130,33 @@
   .btn-outline { background: #fff; color: var(--accent); }
   .print-only { display: none; }
 
-  /* Two printed pages: page 1 = info + Monday, page 2 = Tuesday */
+  /* One printed page: info on top, Monday and Tuesday side by side */
   @media print {
-    @page { size: letter; margin: 0.5in; }
+    @page { size: letter; margin: 0.4in; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    body { padding: 0; font-size: 11.5px; line-height: 1.35; }
+    body { padding: 0; font-size: 11px; line-height: 1.35; }
     .wrap { max-width: none; }
     .actions, .btn-small { display: none !important; }
-    .print-only { display: block; color: var(--muted); margin: 4px 0 0; }
-    header { padding-bottom: 8px; margin-bottom: 10px; }
-    h1 { font-size: 18px; margin-bottom: 4px; }
-    .congrats { padding: 6px 10px; margin-bottom: 10px; }
-    h2 { font-size: 13px; margin: 10px 0 4px; }
-    h3 { font-size: 11px; margin: 4px 0 2px; }
-    li { margin: 1px 0; }
-    .grid { gap: 4px 16px; }
-    .times li { padding: 1px 8px; }
-    th, td { padding: 4px 8px; }
-    table { margin: 4px 0 6px; }
+    .print-only { display: block; color: var(--muted); margin: 2px 0 0; }
+    header { padding-bottom: 6px; margin-bottom: 8px; }
+    h1 { font-size: 17px; margin-bottom: 2px; }
+    .meta { margin: 0; }
+    .congrats { padding: 5px 10px; margin-bottom: 6px; }
+    h2 { font-size: 12.5px; margin: 8px 0 3px; }
+    h3 { font-size: 11px; margin: 2px 0 1px; }
+    ul { margin-bottom: 4px; }
+    li { margin: 0; }
+    .grid { gap: 2px 16px; }
+    .times { gap: 6px; }
+    .times li { padding: 0 8px; }
+    th, td { padding: 4px 6px; }
+    th { font-size: 9px; }
+    table { margin: 3px 0 4px; }
     tr { break-inside: avoid; }
-    .page-break { break-before: page; page-break-before: always; margin-top: 0; }
+    .note { margin-bottom: 3px; }
+    .order { margin-top: 4px; }
+    .days { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+    .days h2 { margin-top: 8px; }
   }
 </style>
 </head>
@@ -210,6 +217,8 @@
   <li><strong>Hospitality room:</strong> Drama Room (D114), both days</li>
   <li><strong>Directors meeting:</strong> Tuesday at 8:30, Drama Room (D114)</li></ul>
 
+<div class="days">
+<section class="day">
 <h2>Monday, November 23, 2026</h2>
 <table>
   <thead><tr><th>Time</th><th>Activity</th></tr></thead>
@@ -228,8 +237,10 @@
     <tr><td class="time">5:00</td><td>Rehearsal ends. Leave setups in place for Tuesday morning. Everyone is dismissed for the day.</td></tr>
   </tbody>
 </table>
+</section>
 
-<h2 class="page-break">Tuesday, November 24, 2026</h2>
+<section class="day">
+<h2>Tuesday, November 24, 2026</h2>
 <p class="note">Bring school performance attire to change into for the concert.</p>
 <table>
   <thead><tr><th>Time</th><th>Activity</th></tr></thead>
@@ -246,6 +257,8 @@
   </tbody>
 </table>
 <p class="order">Performance order: Honor Band, SATB Choir, SSA Choir</p>
+</section>
+</div>
 
 </div>
 </body>
