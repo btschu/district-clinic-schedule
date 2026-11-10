@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 Southeast District Honor Clinic Schedule</title>
+<style>
+  :root {
+    --ink: #1d2433;
+    --muted: #5b6475;
+    --line: #dfe3ea;
+    --accent: #7a1f2b;
+    --accent-soft: #f6eced;
+    --bg: #ffffff;
+    --row: #fafbfc;
+    --flag: #fff3bf;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px 48px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 8px; }
+  .meta { color: var(--muted); margin: 2px 0; }
+  .meta strong { color: var(--ink); }
+  .congrats {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 0 0 28px;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 32px 0 12px;
+    color: var(--accent);
+  }
+  h3 { font-size: 1rem; margin: 16px 0 6px; }
+  ul { margin: 0 0 8px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  li a { color: var(--accent); }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+  }
+  .times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+  }
+  .times li {
+    background: var(--row);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 12px;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    border-bottom: 2px solid var(--line);
+  }
+  td.time {
+    white-space: nowrap;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    width: 1%;
+  }
+  tr.key td { background: var(--accent-soft); }
+  .note { color: var(--muted); margin: 0 0 8px; }
+  .flag { background: var(--flag); padding: 0 3px; border-radius: 3px; }
+  .order {
+    margin-top: 12px;
+    font-weight: 600;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+  }
+  .btn:hover { opacity: 0.9; }
+  .btn-small {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  @media (max-width: 560px) {
+    body { padding: 16px 16px 40px; }
+    h1 { font-size: 1.35rem; }
+    .grid { grid-template-columns: 1fr; }
+    th, td { padding: 8px 6px; }
+    td.time { white-space: normal; width: 5.5em; }
+  }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .actions .btn { margin-top: 0; }
+  button.btn { border: 2px solid var(--accent); font: inherit; font-weight: 600; cursor: pointer; }
+  .btn-outline { background: #fff; color: var(--accent); }
+  .print-only { display: none; }
+
+  /* Two printed pages: page 1 = info + Monday, page 2 = Tuesday */
+  @media print {
+    @page { size: letter; margin: 0.5in; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { padding: 0; font-size: 11.5px; line-height: 1.35; }
+    .wrap { max-width: none; }
+    .actions, .btn-small { display: none !important; }
+    .print-only { display: block; color: var(--muted); margin: 4px 0 0; }
+    header { padding-bottom: 8px; margin-bottom: 10px; }
+    h1 { font-size: 18px; margin-bottom: 4px; }
+    .congrats { padding: 6px 10px; margin-bottom: 10px; }
+    h2 { font-size: 13px; margin: 10px 0 4px; }
+    h3 { font-size: 11px; margin: 4px 0 2px; }
+    li { margin: 1px 0; }
+    .grid { gap: 4px 16px; }
+    .times li { padding: 1px 8px; }
+    th, td { padding: 4px 8px; }
+    table { margin: 4px 0 6px; }
+    tr { break-inside: avoid; }
+    .page-break { break-before: page; page-break-before: always; margin-top: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Southeast District Music Clinic Schedule</h1>
+  <p class="meta"><strong>South High School</strong>, 1213 W. Allison Rd., Cheyenne, WY 82007</p>
+  <p class="meta"><strong>Monday–Tuesday, November 23–24, 2026</strong></p>
+  <div class="actions">
+    <a class="btn" href="https://26-district-clinic.netlify.app" target="_blank" rel="noopener">View the Concert Program</a>
+    <button class="btn btn-outline" type="button" onclick="window.print()">Print Schedule</button>
+  </div>
+  <p class="print-only">Concert program: 26-district-clinic.netlify.app</p>
+</header>
+
+<p class="congrats">Congratulations on being selected for the 2026 District Clinic Honor Band and Choirs!</p>
+
+<h2>Reminders</h2>
+<div class="grid">
+  <div>
+    <h3>All students</h3>
+    <ul>
+      <li>Practice and prepare music before the clinic</li>
+      <li>Write measure numbers on all music</li>
+      <li>Bring concert attire for Tuesday's performance</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Essentials</h3>
+    <ul>
+      <li><strong>Band:</strong> instrument, music, pencil, water bottle, and any mutes your part calls for</li>
+      <li><strong>Choirs:</strong> music, pencil, water bottle, black folder</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Times to avoid parking and hallways</h2>
+<p class="note">Classes are in session both days. Hallways are busy during South's passing periods:</p>
+<ul class="times">
+  <li>7:30–7:45</li>
+  <li>9:10–9:35</li>
+  <li>11:00–11:50</li>
+  <li>1:15–1:20</li>
+  <li>2:45–3:15</li>
+</ul>
+
+<h2>Parking</h2>
+<ul>
+  <li><strong>Bus drop-off:</strong> Main Entrance, during non-peak times</li>
+  <li><strong>Bus parking:</strong> Northeast Parking Lot</li>
+  <li><strong>Student parking:</strong> Student lot (non-painted spaces), north of school</li>
+</ul>
+
+<h2>For directors</h2>
+<ul>
+  <li><strong>Hospitality room:</strong> Drama Room (D114), both days</li>
+  <li><strong>Directors meeting:</strong> Tuesday at 8:30, Drama Room (D114)</li></ul>
+
+<h2>Monday, November 23, 2026</h2>
+<table>
+  <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+  <tbody>
+    <tr><td class="time">8:00</td><td>Arrive at South through the Main Entrance. Cases and coats go in the Auditorium Pod closest to the music rooms. Classes are in session, so stay quiet outside rehearsal spaces.</td></tr>
+    <tr class="key"><td class="time">8:30</td><td><strong>Rehearsal.</strong> Honor Band: Band Room (D102). SATB Choir: Choir Room (D104). SSA Choir: Auditorium Stage.</td></tr>
+    <tr><td class="time">10:00–10:15</td><td>Honor Band break</td></tr>
+    <tr><td class="time">10:15–10:30</td><td>SATB Choir break</td></tr>
+    <tr><td class="time">10:30–10:45</td><td>SSA Choir break</td></tr>
+    <tr class="key"><td class="time">12:00–1:30</td><td><strong>Lunch.</strong> Please return after 1:20 to avoid South's passing period.</td></tr>
+    <tr class="key"><td class="time">1:30</td><td><strong>Rehearsal.</strong> Same rooms as the morning.</td></tr>
+    <tr class="key"><td class="time">2:00</td><td><strong>Choirs swap.</strong> SSA Choir clears the stage and moves to the Choir Room (D104). SATB Choir moves to the Stage.</td></tr>
+    <tr><td class="time">3:15–3:30</td><td>Honor Band break</td></tr>
+    <tr><td class="time">3:30–3:45</td><td>SATB Choir break</td></tr>
+    <tr><td class="time">3:45–4:00</td><td>SSA Choir break</td></tr>
+    <tr><td class="time">5:00</td><td>Rehearsal ends. Leave setups in place for Tuesday morning. Everyone is dismissed for the day.</td></tr>
+  </tbody>
+</table>
+
+<h2 class="page-break">Tuesday, November 24, 2026</h2>
+<p class="note">Bring school performance attire to change into for the concert.</p>
+<table>
+  <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+  <tbody>
+    <tr><td class="time">8:00</td><td>Arrive at South through the Main Entrance. Cases and coats go in the Auditorium Pod closest to the music rooms.</td></tr>
+    <tr class="key"><td class="time">8:30</td><td><strong>Rehearsal.</strong> Honor Band: Band Room (D102). SATB Choir: Stage. SSA Choir: Choir Room (D104).</td></tr>
+    <tr><td class="time">8:30</td><td><strong>Southeast District Directors Meeting</strong>, Drama Room (D114)</td></tr>
+    <tr class="key"><td class="time">10:00–10:15</td><td><strong>Break and swap</strong> for Honor Band and SATB Choir: SATB Choir clears the stage and moves to the Band Room (D102). Honor Band moves to the Stage.</td></tr>
+    <tr><td class="time">10:30–10:45</td><td>SSA Choir break</td></tr>
+    <tr class="key"><td class="time">12:00–1:30</td><td><strong>Lunch.</strong> Please return after 1:20 to avoid South's passing period.</td></tr>
+    <tr class="key"><td class="time">1:30</td><td><strong>Rehearsal.</strong> Honor Band: Stage. SATB Choir: Band Room (D102). SSA Choir: Choir Room (D104).</td></tr>
+    <tr><td class="time">3:00</td><td><strong>Transition.</strong> Move all cases, coats and clothes to your group's room, then change into concert attire.</td></tr>
+    <tr class="key"><td class="time">3:30</td><td><strong>Southeast District Honor Group Concert</strong>, South Auditorium<br><a class="btn-small" href="https://26-district-clinic.netlify.app" target="_blank" rel="noopener">Concert program &rarr;</a></td></tr>
+  </tbody>
+</table>
+<p class="order">Performance order: Honor Band, SATB Choir, SSA Choir</p>
+
+</div>
+</body>
+</html>
